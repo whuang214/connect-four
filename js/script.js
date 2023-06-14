@@ -2,7 +2,7 @@
 const COLORS = {
   1: "red",
   "-1": "yellow",
-  0: "white",
+  0: "lightgray",
 };
 
 /*----- state variables -----*/
@@ -42,13 +42,6 @@ function init() {
       div.classList.remove("fall"); // remove the fall animation from the cell
     }
   }
-
-//   for(let i = 0; i < 7; i++) {
-//     for(let j = 0; j < 6; j++){
-//       const div = document.getElementById(`c${i}r${j}-background`);
-//       div.style.display = "none";
-//     }
-//   }
 
   render();
 }

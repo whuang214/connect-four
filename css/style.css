@@ -6,7 +6,7 @@
 body {
   height: 100vh;
   margin: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Press Start 2P', cursive;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -16,12 +16,12 @@ body {
 
 header {
   font-size: 4vmin;
-  color: darkgray;
-  letter-spacing: 1vmin;
+  color: white;
+  /* letter-spacing: 1vmin; */
 }
 
 h1 {
-  color: gray;
+  color: white;
   font-size: 3vmin;
 }
 
@@ -36,7 +36,7 @@ h1 {
   height: 10vmin;
   border-width: 5vmin;
   border-style: solid;
-  border-color: lightgray transparent transparent;
+  border-color: orange transparent transparent;
   transform: scale(0.7);
 }
 
@@ -44,7 +44,7 @@ h1 {
   cursor: pointer;
   transform: scale(0.9);
   transition: transform 0.2s ease-in-out;
-  border-top-color: darkgray;
+  border-top-color: orangered;
 }
 
 #board {
@@ -57,22 +57,22 @@ h1 {
 
 #board > div {
   border-radius: 50%;
-  border: 0.1vmin solid gray;
+  border: .3vmin solid gray;
 }
 
 button {
   margin-top: 4vmin;
   padding: 2vmin;
   font-size: 2vmin;
-  border-radius: 4vmin;
-  border: 0.1vmin solid gray;
-  color: gray;
+  border-radius: 2vmin;
+  border: 0.3vmin solid white;
+  color: white;
+  background-color: orange;
 }
 
 button:hover {
   cursor: pointer;
-  background-color: darkgray;
-  color: white;
+  background-color: orangered;
 }
 
 .fall {

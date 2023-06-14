@@ -1,79 +1,91 @@
 * {
-    box-sizing: border-box;
-    /* border: 0.5px solid red; */
+  box-sizing: border-box;
+  /* border: 0.5px solid red; */
 }
 
 body {
-    height: 100vh;
-    margin: 0;
-    font-family: 'Open Sans', sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: blue;
 }
 
 header {
-    font-size: 4vmin; 
-    color: darkgray;
-    letter-spacing: 1vmin;
+  font-size: 4vmin;
+  color: darkgray;
+  letter-spacing: 1vmin;
 }
 
 h1 {
-    color: gray;
-    font-size: 3vmin;
+  color: gray;
+  font-size: 3vmin;
 }
 
 #markers {
-    display: grid;
-    grid-template-columns: repeat(7, 10vmin);
-    gap: 1vmin;
-    margin-top: 1.5vmin;
+  display: grid;
+  grid-template-columns: repeat(7, 10vmin);
+  gap: 1vmin;
+  margin-top: 1.5vmin;
 }
 
 #markers > div {
-    height: 10vmin;
-    border-width: 5vmin;
-    border-style: solid;
-    border-color: lightgray transparent transparent;
-    transform: scale(0.7);
+  height: 10vmin;
+  border-width: 5vmin;
+  border-style: solid;
+  border-color: lightgray transparent transparent;
+  transform: scale(0.7);
 }
 
 #markers > div:hover {
-    cursor: pointer;
-    transform: scale(0.9);
-    transition: transform .2s ease-in-out;
-    border-top-color: darkgray;
+  cursor: pointer;
+  transform: scale(0.9);
+  transition: transform 0.2s ease-in-out;
+  border-top-color: darkgray;
 }
 
-
 #board {
-    display: grid;
-    grid-template-columns: repeat(7, 10vmin);
-    grid-template-rows: repeat(6, 10vmin);
-    gap: 1vmin;
-    margin-top: -4vmin;
+  display: grid;
+  grid-template-columns: repeat(7, 10vmin);
+  grid-template-rows: repeat(6, 10vmin);
+  gap: 1vmin;
+  margin-top: -4vmin;
 }
 
 #board > div {
-    border-radius: 50%;
-    border: 0.1vmin solid gray;
+  border-radius: 50%;
+  border: 0.1vmin solid gray;
 }
 
 button {
-    margin-top: 4vmin;
-    padding: 2vmin;
-    font-size: 2vmin;
-    border-radius: 4vmin;
-    border: 0.1vmin solid gray;
-    color: gray;
+  margin-top: 4vmin;
+  padding: 2vmin;
+  font-size: 2vmin;
+  border-radius: 4vmin;
+  border: 0.1vmin solid gray;
+  color: gray;
 }
 
 button:hover {
-    cursor: pointer;
-    background-color: darkgray;
-    color: white;
+  cursor: pointer;
+  background-color: darkgray;
+  color: white;
 }
 
+.fall {
+  animation-name: fall-animation;
+  animation-duration: 500ms;
+  animation-timing-function: ease-out;
+}
 
-
+@keyframes fall-animation {
+  from {
+    transform: translateY(-1000px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

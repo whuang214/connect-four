@@ -36,6 +36,20 @@ function init() {
   ];
   turn = 1;
   winner = null;
+  for(let i = 0; i < 7; i++){
+    for(let j = 0; j < 6; j++){
+      const div = document.getElementById(`c${i}r${j}`);
+      div.classList.remove("fall"); // remove the fall animation from the cell
+    }
+  }
+
+//   for(let i = 0; i < 7; i++) {
+//     for(let j = 0; j < 6; j++){
+//       const div = document.getElementById(`c${i}r${j}-background`);
+//       div.style.display = "none";
+//     }
+//   }
+
   render();
 }
 
@@ -87,11 +101,17 @@ function renderControls() {
 
 // handle a click on the marker
 function handleDrop(event) {
+    
   const colIdx = markerEls.indexOf(event.target); // find the index of the marker that was clicked
   if (colIdx === -1 || winner) return; // if not a marker or there is a winner, return
   // console.log(colIdx);
   const rowIdx = board[colIdx].indexOf(0); // find the first 0 in the column (somehow js can do this with indexOf)
   // console.log(rowIdx);
+
+  const div = document.getElementById(`c${colIdx}r${rowIdx}`);
+  div.classList.add("fall"); // add the fall animation to the cell
+
+
   if (rowIdx === -1) return; // if there are no 0's in the column, return
   board[colIdx][rowIdx] = turn; // set the value of the cell to the current turn
   turn *= -1; // switch the turn

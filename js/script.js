@@ -144,18 +144,18 @@ function countAdjacent(colIdx, rowIdx, colOffset, rowOffset) {
 
 // check for a vertical win
 function checkVerticalWin(colIdx, rowIdx) {
-  return countAdjacent(colIdx, rowIdx, 0, -1) === 3
-    ? board[colIdx][rowIdx]
-    : null; // check for 3 below
+  return countAdjacent(colIdx, rowIdx, 0, -1) === 3 // check 3 above
+    ? board[colIdx][rowIdx] // return the player if there are 3 above
+    : null; // else return null
 }
 
 // check for a horizontal win
-function checkHorizontalWin(colIdx, rowIdx) {
-  return countAdjacent(colIdx, rowIdx, 1, 0) +
-    countAdjacent(colIdx, rowIdx, -1, 0) ===
+function checkHorizontalWin(colIdx, rowIdx) { 
+  return countAdjacent(colIdx, rowIdx, 1, 0) + // check right
+    countAdjacent(colIdx, rowIdx, -1, 0) === // check left
     3
-    ? board[colIdx][rowIdx]
-    : null; // check for 3 to the left and right
+    ? board[colIdx][rowIdx] // return the player if there are 3 to the left and right
+    : null; // else return null
 }
 
 //check for a diagonal win
@@ -166,6 +166,6 @@ function checkDiagonalWin(colIdx, rowIdx) {
     countAdjacent(colIdx, rowIdx, 1, -1) + // check south east
       countAdjacent(colIdx, rowIdx, -1, 1) ===  // check north west
       3
-    ? board[colIdx][rowIdx]
-    : null; // check for 3 diagonally
+    ? board[colIdx][rowIdx] // return the player if there are 3 to the left and right
+    : null;  // else return null
 }

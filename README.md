@@ -15,7 +15,7 @@ JavaScript implementation of the classic game Connect 4, where two players take 
 
 ## Getting Started
 
-Play the game by visiting this link
+Play the game by visiting [this](https://whuang214.github.io/connect-four/) link
 
 **Instructions:**
 1. Player 1 starts the game by clicking on the column they want to drop their disc into.
